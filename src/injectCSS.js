@@ -1,12 +1,14 @@
-import cssRules from "../dist/styles.css";
-
 const injectCSS = () => {
-	var css = cssRules,
-		head = document.head || document.getElementsByTagName("head")[0],
-		style = document.createElement("style");
+	var head = document.head;
+	var link = document.createElement("link");
 
-	head.appendChild(style);
-	style.appendChild(document.createTextNode(css));
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	link.href = "https://cdn.jsdelivr.net/gh/joseph-farruggio/password-strength-widget@main-built/styles.min.css";
+
+	// For local dev:
+	// link.href = "./../dist/styles.css";
+	head.appendChild(link);
 };
 
 export default injectCSS;
