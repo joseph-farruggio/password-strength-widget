@@ -1,8 +1,17 @@
 let mix = require("laravel-mix");
 require("laravel-mix-tailwind");
+mix.setPublicPath("dist");
 
-mix.css("src/styles.css", "dist/styles.css").tailwind();
-mix.js("src/app.js", "dist/app.js").setPublicPath("dist");
+mix
+	.css("src/styles.css", "dist/styles.css")
+	.tailwind()
+	.then(() => {
+		mix.js("src/app.js", "dist/app.js");
+	});
+
+// mix.js("resources/assets/js/app.js", "public/js").then((stats) => {
+// 	console.log(Object.keys(stats.compilation.assets));
+// });
 
 mix.webpackConfig({
 	module: {
