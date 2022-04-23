@@ -1,0 +1,24 @@
+{
+  "name": "password-strength-widget",
+  "version": "1.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx mix watch",
+    "build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": { 
+    "alpinejs": "^3.0.1",
+    "cross-env": "^7.0.3",
+    "html-loader": "^3.1.0",
+    "postcss": "^8.4.5"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.41",
+    "laravel-mix-tailwind": "^0.1.2",
+    "posthtml": "^0.16.5",
+    "tailwindcss": "^3.0.18"
+  }
+}
